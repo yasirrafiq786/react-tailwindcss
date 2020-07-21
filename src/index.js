@@ -1,11 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-
-const Hello = function() {
-    return <div> Hello World</div>;
-};
-
-ReactDOM.render(
-  <Hello />,
-  document.getElementById('root')
-);
+import React from "react";
+import ReactDOM from "react-dom";
+import './assets/style/main.css';
+import App from "./App";
+ReactDOM.render(<App />, document.getElementById("container"));

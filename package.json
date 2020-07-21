@@ -6,17 +6,18 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "postcss-import": "^12.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "npm run watch:css && react-scripts start",
-    "build": "npm run build:css && react-scripts build",
+    "start": "yarn watch:css && react-scripts start",
+    "build": "yarn build:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css", 
-    "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css"
+    "build:css": "postcss src/assets/style/tailwind.css -o src/assets/style/main.css",
+    "watch:css": "postcss src/assets/style/tailwind.css -o src/assets/style/main.css"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,8 +40,3 @@
     "tailwindcss": "^1.5.1"
   }
 }
-
-    //"start": "react-scripts start",
-    // "build": "react-scripts build",
-    // "test": "react-scripts test",
-    // "eject": "react-scripts eject"
