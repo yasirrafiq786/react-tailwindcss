@@ -14,16 +14,19 @@ class TodoItems extends Component {
 
   createTasks(item) {
     return (
-      <li className="p-2 rounded-md mt-3 bg-blue-900 bg-opacity-50 text-xl text-white text-opacity-70">
+      <li className="flex justify-between p-2 rounded-md mt-3 bg-blue-900 bg-opacity-50 text-xl text-white text-opacity-70 overflow-auto">
         {' '}
-        <div className="flex justify-between" key={item.key}>
-          {item.text}
-          <button onClick={() => this.delete(item.key)}>
-            <i className="far fa-trash-alt text-blue-400"></i>
-          </button>
+        <div key={item.key}>
+          <div className="mb- break-normal">{item.text}</div>
+          <div className="text-xs text-white">
+            <i className="far fa-clock mr-1 align-center"></i>{' '}
+            <i>{moment(item.key).fromNow()}</i>
+          </div>
         </div>
-        <div className="text-xs text-gray-700">
-          {moment(item.key).fromNow()}
+        <div className="self-center">
+          <button  onClick={() => this.delete(item.key)}>
+            <i className="far fa-trash-alt text-blue-400 hover:text-white font-thin"></i>
+          </button>
         </div>
       </li>
     );
@@ -34,7 +37,7 @@ class TodoItems extends Component {
     var listItems = todoEntries.map(this.createTasks);
 
     return (
-      <ul className="theList">
+      <ul className="theList p-6">
         <FlipMove duration={250} easing="ease-out">
           {listItems}
         </FlipMove>

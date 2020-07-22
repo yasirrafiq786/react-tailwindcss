@@ -45,7 +45,7 @@ class TodoList extends Component {
     return (
       <div className="todoListMain">
         <div className="header">
-          <form onSubmit={this.addItem}>
+          <form onSubmit={this.addItem} className="flex justify-center mt-4 focus:outline-none">
             <input
               ref={(a) => (this._inputElement = a)}
               placeholder="Enter task..."
