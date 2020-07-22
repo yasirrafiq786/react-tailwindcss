@@ -45,14 +45,14 @@ class TodoList extends Component {
     return (
       <div className="todoListMain">
         <div className="header">
-          <form onSubmit={this.addItem} className="flex justify-center mt-4 focus:outline-none">
+          <form onSubmit={this.addItem} className="flex justify-center mt-4">
             <input
               ref={(a) => (this._inputElement = a)}
               placeholder="Enter task..."
-              className="rounded-md p-2 text-black"
+              className="rounded-md p-2 text-black w-3/5 focus:outline-none md:shadow-lg"
             ></input>
-            <button type="submit" className="ml-3">
-              <i className="fas fa-plus text-2xl text-blue-400"></i>
+            <button type="submit" className="ml-3 focus:outline-none focus:opacity-50 ">
+              <i className="fas fa-plus text-2xl text-blue-400 md:text-black"></i>
             </button>
           </form>
         </div>
