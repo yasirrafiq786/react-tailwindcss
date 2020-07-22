@@ -48,11 +48,11 @@ class TodoList extends Component {
           <form onSubmit={this.addItem}>
             <input
               ref={(a) => (this._inputElement = a)}
-              placeholder="enter task"
-              className="rounded-sm"
+              placeholder="Enter task..."
+              className="rounded-md p-2 text-black"
             ></input>
-            <button type="submit" className="ml-2">
-              <i className="fas fa-plus"></i>
+            <button type="submit" className="ml-3">
+              <i className="fas fa-plus text-2xl text-blue-400"></i>
             </button>
           </form>
         </div>
